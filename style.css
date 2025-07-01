@@ -173,3 +173,53 @@ footer {
   background: #ff4d6d;
   color: #fff;
 }
+.contributors-hero {
+  position: relative;
+  height: 400px;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 60px 20px;
+  background: radial-gradient(ellipse at top left, #1e1e3f, #0d0d1a);
+}
+
+.contributors-hero #particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.contributors-hero .content {
+  position: relative;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.contributors-hero h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+.contributors-hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5em;
+}
+
+.btn-hero {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background: white;
+  color: black;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+  background: #00bfff;
+  color: white;
+  box-shadow: 0 0 10px #00bfff;
+}
