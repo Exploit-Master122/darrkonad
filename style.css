@@ -231,3 +231,41 @@ footer {
   color: white;
   box-shadow: 0 0 10px #00bfff;
 }
+.launch-countdown {
+  text-align: center;
+  padding: 80px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  margin: 60px 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(255, 0, 60, 0.1);
+}
+
+.launch-countdown h2 {
+  font-size: 2rem;
+  color: #ff4d6d;
+  margin-bottom: 30px;
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+#countdown div {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 15px;
+  min-width: 80px;
+  box-shadow: 0 0 10px rgba(255, 77, 109, 0.1);
+}
+
+#countdown p {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin: 5px 0 0;
+}
