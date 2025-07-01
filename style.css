@@ -23,19 +23,25 @@ body {
   pointer-events: none;
 }
 
-/* Subtle Overlay */
+/* Subtle Overlay Animation */
 body::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle, rgba(255,0,64,0.06) 0%, rgba(0,0,80,0.1) 100%);
+  background: radial-gradient(circle, rgba(255, 0, 64, 0.06) 0%, rgba(0, 0, 80, 0.1) 100%);
   z-index: -2;
   animation: pulseOverlay 10s ease-in-out infinite alternate;
 }
 
 @keyframes pulseOverlay {
-  0% { opacity: 0.05; transform: scale(1); }
-  100% { opacity: 0.1; transform: scale(1.03); }
+  0% {
+    opacity: 0.05;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(1.03);
+  }
 }
 
 /* Hero Section */
@@ -173,6 +179,8 @@ footer {
   background: #ff4d6d;
   color: #fff;
 }
+
+/* Contributors Hero Section */
 .contributors-hero {
   position: relative;
   height: 400px;
