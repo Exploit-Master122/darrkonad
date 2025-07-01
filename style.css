@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 /* Base Styles */
 body {
   margin: 0;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', sans-serif;
   background: radial-gradient(ellipse at bottom, #030310 0%, #000007 100%);
-  color: #eaeaea;
+  color: #f5f5f5;
   overflow-x: hidden;
   position: relative;
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.05rem;
+  line-height: 1.75;
 }
 
 /* Particle Layer */
@@ -30,7 +30,7 @@ body::after {
   inset: 0;
   background: radial-gradient(circle, rgba(255,0,64,0.06) 0%, rgba(0,0,80,0.1) 100%);
   z-index: -2;
-  animation: pulseOverlay 12s ease-in-out infinite alternate;
+  animation: pulseOverlay 10s ease-in-out infinite alternate;
 }
 
 @keyframes pulseOverlay {
@@ -38,7 +38,7 @@ body::after {
   100% { opacity: 0.1; transform: scale(1.03); }
 }
 
-/* HERO SECTION */
+/* Hero Section */
 .hero {
   text-align: center;
   padding: 140px 30px;
@@ -50,37 +50,26 @@ body::after {
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   color: #ff4d6d;
-  font-style: italic;
-  text-shadow: 0 0 12px rgba(255, 77, 109, 0.4);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-shadow: 0 0 10px rgba(255, 77, 109, 0.25);
   margin-bottom: 20px;
 }
 
-/* Cool Italic Link Style */
+/* Links */
 a {
-  color: #f06;
-  font-style: italic;
-  position: relative;
+  color: #ff6a85;
+  font-weight: 500;
   text-decoration: none;
+  border-bottom: 2px solid rgba(255, 106, 133, 0.5);
+  transition: all 0.2s ease-in-out;
 }
 
-a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, #ff4d6d, transparent);
-  transition: 0.3s ease;
-  opacity: 0.8;
-}
-
-a:hover::after {
-  width: 100%;
-  height: 3px;
-  opacity: 1;
+a:hover {
+  color: #fff;
+  border-bottom-color: #ff4d6d;
 }
 
 /* Features Section */
@@ -91,7 +80,8 @@ a:hover::after {
 .features h2 {
   text-align: center;
   margin-bottom: 50px;
-  font-size: 2.2rem;
+  font-size: 2rem;
+  font-weight: 600;
   color: #ff4455;
   text-shadow: 0 0 6px #ff445533;
 }
@@ -108,7 +98,6 @@ a:hover::after {
   border-radius: 20px;
   backdrop-filter: blur(12px);
   box-shadow: 0 0 20px rgba(255, 70, 100, 0.12);
-  color: #eee;
 }
 
 /* Steps Section */
@@ -127,7 +116,6 @@ a:hover::after {
   padding: 25px;
   border-radius: 18px;
   backdrop-filter: blur(8px);
-  color: #e6e6e6;
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.03);
 }
 
@@ -150,7 +138,7 @@ a:hover::after {
   margin-top: 30px;
   border-radius: 40px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s ease;
 }
@@ -166,7 +154,7 @@ footer {
   text-align: center;
   padding: 30px;
   font-size: 15px;
-  color: #888;
+  color: #999;
 }
 
 /* Toggle Button */
@@ -185,4 +173,3 @@ footer {
   background: #ff4d6d;
   color: #fff;
 }
-
