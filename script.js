@@ -38,7 +38,7 @@ function updateCountdown() {
   const s = Math.floor((gap % minute) / second);
 
   if (gap <= 0) {
-    document.getElementById("countdown").innerHTML = "<h3>🎉 Happy Darrkon Day! Darrkon v7 is Live!</h3>";
+    document.getElementById("countdown").innerHTML = "<h3>🚀 Darrkon v7 has Launched!! 🚀</h3>";
   } else {
     document.getElementById("days").innerText = d;
     document.getElementById("hours").innerText = h;
@@ -48,3 +48,35 @@ function updateCountdown() {
 }
 
 setInterval(updateCountdown, 1000);
+
+
+<script>
+  const canvas = document.getElementById('matrixCanvas');
+  const ctx = canvas.getContext('2d');
+  canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth;
+
+  const letters = '我的網站完全是由超文本標記語言構成的哈哈'.split('');
+  const fontSize = 16;
+  const columns = canvas.width / fontSize;
+  const drops = Array(Math.floor(columns)).fill(1);
+
+  function draw() {
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#0F0';
+    ctx.font = fontSize + 'px monospace';
+
+    for (let i = 0; i < drops.length; i++) {
+      const text = letters[Math.floor(Math.random() * letters.length)];
+      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+      if (drops[i] * fontSize > canvas.height || Math.random() > 0.95) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  }
+
+  setInterval(draw, 50);
+</script>
+
