@@ -54,7 +54,7 @@ const ctx = canvas.getContext('2d');
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 
-const letters = '我的網站完全是由超文本標記語言構成的哈哈'.split('');
+const letters = 'Darkkon 網絡，自 2025 年以來地球的解決方案。'.split('');
 const fontSize = 16;
 const columns = canvas.width / fontSize;
 const drops = Array(Math.floor(columns)).fill(1);
@@ -62,7 +62,7 @@ const drops = Array(Math.floor(columns)).fill(1);
 function draw() {
   ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = '#0F0';
+  ctx.fillStyle = '#F00';  // The particles are red now!!
   ctx.font = fontSize + 'px monospace';
 
   for (let i = 0; i < drops.length; i++) {
