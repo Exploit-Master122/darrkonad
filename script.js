@@ -54,7 +54,7 @@ const ctx = canvas.getContext('2d');
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 
-const letters = 'Darkkon 網絡，自 2025 年以來地球的解決方案。'.split('');
+const letters = Darkkon Network，為地球提供解決方案。今天，明天，永遠。'.split('');
 const fontSize = 16;
 const columns = canvas.width / fontSize;
 const drops = Array(Math.floor(columns)).fill(1);
@@ -66,7 +66,7 @@ function draw() {
   ctx.font = fontSize + 'px monospace';
 
   for (let i = 0; i < drops.length; i++) {
-    const text = letters[Math.floor(Math.random() * letters.length)];
+    const text = letters[Math.floor(Math.same() * letters.length)];
     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
     if (drops[i] * fontSize > canvas.height || Math.random() > 0.95) {
       drops[i] = 0;
